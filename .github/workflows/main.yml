@@ -115,6 +115,6 @@ jobs:
          REPOSITORY: ${{ env.ECR_REPOSITORY }}
          IMAGE_TAG: ${{ github.sha }}
         run: |
-         docker build -f /Docker-files/app/multistage/Dockerfile -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
+         docker build -f Docker-files/app/multistage/Dockerfile -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
          docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
          echo "Docker image pushed to ECR: $REGISTRY/$REPOSITORY:$IMAGE_TAG"
