@@ -27,7 +27,7 @@ jobs:
           fetch-depth: 0
 
       - name: Maven Build
-        run: mvn install
+        run: mvn clean install
 
       - name: Upload Build Artifact (WAR)
         uses: actions/upload-artifact@v4
